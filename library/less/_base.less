@@ -39,6 +39,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: #565656;
+	background-color: @bg;
 }
 
 /********************
@@ -268,9 +269,16 @@ and moe scalable.
 08. POSTS & CONTENT STYLES
 *********************/
 
-#content {
-	margin-top: 2.2em;
-}
+#content {}
+		
+		#inner-content {
+			background-color: @white;
+			border: 1px solid @grey;
+			
+			#main {
+				padding: 0 0.6em;
+			}
+		}
 
 		.hentry {
 
