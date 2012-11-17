@@ -194,17 +194,19 @@ and moe scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
-	border-bottom: 0;
+	border-bottom: 1px solid @grey;
+	background: #eee;
 
 	li {
+		float: left;
+		position: relative;
 
 		a {
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
 			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+			border-bottom: 3px solid #eee;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -213,7 +215,8 @@ and moe scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-
+				background-color: #dedede;
+				border-bottom: 3px solid @bones-green;
 			}
 		}
 
@@ -258,7 +261,9 @@ and moe scalable.
 	li.current_page_item,
 	li.current-page-ancestor {
 
-		a {}
+		a {
+			border-bottom: 3px solid @bones-green;
+		}
 
 	}  /* end current highlighters */
 
