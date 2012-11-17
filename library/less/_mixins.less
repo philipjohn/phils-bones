@@ -59,10 +59,10 @@ http://0to255.com/
 @black:             #000;
 @white:             #fff;
 
-@bones-pink:        #f01d4f;
-@bones-blue:        #1990db;
+@bones-green:       #657C35;
+@bones-blue:        #5B0B3A;
 
-@link-color:        @bones-pink;
+@link-color:        @bones-green;
 @link-hover:        darken(@link-color, 9%);
 
 /*
@@ -76,7 +76,7 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
+@sans-serif:         "Calibri", Helvetica, Arial, sans-serif; 
 @serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
 
 
@@ -209,9 +209,9 @@ BUTTONS
 *********************/
 
 .button, .button:visited {
-	border: 1px solid darken(@bones-pink, 13%);
-	border-top-color: darken(@bones-pink, 7%);
-	border-left-color: darken(@bones-pink, 7%);
+	border: 1px solid darken(@bones-green, 13%);
+	border-top-color: darken(@bones-green, 7%);
+	border-left-color: darken(@bones-green, 7%);
 	padding: 4px 12px;
 	color: @white;
 	display: inline-block;
@@ -224,18 +224,18 @@ BUTTONS
 	line-height: 21px;
 	.transition();
 	.border-radius(4px);
-	.css-gradient(@bones-pink,darken(@bones-pink, 5%));
+	.css-gradient(@bones-green,darken(@bones-green, 5%));
 
 	&:hover, &:focus {
 		color: @white;
-	  border: 1px solid darken(@bones-pink, 13%);
-	  border-top-color: darken(@bones-pink, 20%);
-	 	border-left-color: darken(@bones-pink, 20%);
-		.css-gradient(darken(@bones-pink, 5%),darken(@bones-pink, 10%));
+	  border: 1px solid darken(@bones-green, 13%);
+	  border-top-color: darken(@bones-green, 20%);
+	 	border-left-color: darken(@bones-green, 20%);
+		.css-gradient(darken(@bones-green, 5%),darken(@bones-green, 10%));
 	}
 	
 	&:active {
-		.css-gradient(darken(@bones-pink, 5%),@bones-pink);
+		.css-gradient(darken(@bones-green, 5%),@bones-green);
 	}	
 }
 
