@@ -35,7 +35,7 @@ and will be used across all viewports.
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: @sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: #565656;
@@ -125,7 +125,7 @@ a, a:visited {
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: @sans-serif;
+	font-family: @serif;
 	text-rendering: optimizelegibility;
 	font-weight: 500;
 	/*
@@ -177,6 +177,8 @@ h5, .h5 {
 	}
 	
 	.site-description {
+		font-family: @serif;
+		font-size: 170%;
 		margin: 0;
 		text-align: center;
 	}
@@ -315,6 +317,7 @@ and moe scalable.
 		/* post meta */
 		.byline {
 			color: #999;
+			font-size: 85%;
 
 			time {}
 		}
