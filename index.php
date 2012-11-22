@@ -14,19 +14,19 @@
 							
 							    <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 							
-							    <p class="byline vcard"><?php _e('Posted', 'bonestheme'); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time(get_option('date_format')); ?></time> <?php _e('by', 'bonestheme'); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e('filed under', 'bonestheme'); ?> <?php the_category(', '); ?>.</p>
+							    <?php if (!is_mobile()) { ?><p class="byline vcard"><?php _e('Posted', 'bonestheme'); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time(get_option('date_format')); ?></time> <?php _e('by', 'bonestheme'); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e('filed under', 'bonestheme'); ?> <?php the_category(', '); ?>.</p><?php } ?>
 						
 						    </header> <!-- end article header -->
 					
 						    <section class="entry-content clearfix">
-							    <?php the_content(); ?>
+							    <?php if (is_mobile()) { the_excerpt(); } else { the_content(); } ?>
 						    </section> <!-- end article section -->
 						
-						    <footer class="article-footer">
+						    <?php if (!is_mobile()) { ?><footer class="article-footer">
 
     							<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
 
-						    </footer> <!-- end article footer -->
+						    </footer> <!-- end article footer --><?php } ?>
 						    
 						    <?php // comments_template(); // uncomment if you want to use them ?>
 					
