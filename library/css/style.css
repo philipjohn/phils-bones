@@ -90,6 +90,8 @@ h5,.h5{font-size:0.846em;line-height:2.09em;text-transform:uppercase;letter-spac
 #inner-content{background-color:#ffffff;border:1px solid #cccccc;}#inner-content #main{padding:0 0.6em;}
 .byline{color:#999;font-size:85%;}
 .entry-content{}
+.entry-content ul li{list-style-type:disc;margin-left:2em;}
+.entry-content form li{margin-left:0;}
 .entry-content dd{margin-left:0;font-size:0.9em;color:#787878;margin-bottom:1.5em;}
 .entry-content img{margin:0 0 1.5em 0;max-width:100%;height:auto;}
 .entry-content video,.entry-content object{max-width:100%;height:auto;}
