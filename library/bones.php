@@ -372,7 +372,10 @@ function bones_filter_ptags_on_images($content){
 // This removes the annoying […] to a Read More link
 function bones_excerpt_more($more) {
 	global $post;
-	// edit here if you like
+	
+	if ('portfolio' == $post->post_type)
+		return '...';
+	
 	return '...  <a href="'. get_permalink($post->ID) . '" title="Read '.get_the_title($post->ID).'">Read more &raquo;</a>';
 }
 

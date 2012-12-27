@@ -100,6 +100,7 @@ h5,.h5{font-size:0.846em;line-height:2.09em;text-transform:uppercase;letter-spac
 .entry-content pre{background:#eee;border:1px solid #cecece;padding:10px;}
 .wp-caption{background:#eee;padding:5px;}.wp-caption img{margin-bottom:0;width:100%;}
 .wp-caption p.wp-caption-text{font-size:0.85em;margin:4px 0 7px;text-align:center;}
+.post-type-archive-portfolio article.portfolio{width:180px;min-height:273px;padding:0 0.7em;}
 .page-navigation,.wp-prev-next{margin:1.1em 0 2.2em;}
 .bones_page_navi{}.bones_page_navi li{float:left;margin-left:10px;}.bones_page_navi li a{padding:3px 6px;display:block;text-decoration:none;position:relative;}.bones_page_navi li a:hover,.bones_page_navi li a:focus{color:#f01d4f;text-decoration:underline;}
 .bones_page_navi li.bpn-current{padding:3px 6px;border-bottom:2px solid #f01d4f;position:relative;}.bones_page_navi li.bpn-current a{}

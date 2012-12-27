@@ -38,7 +38,7 @@ Template Name: Custom Page Example
 					
 					    </article> <!-- end article -->
 					
-					    <?php endwhile; ?>	
+					    <?php endwhile; ?>
 					
 					    <?php else : ?>
 					

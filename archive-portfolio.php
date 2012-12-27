@@ -10,19 +10,20 @@
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix float-left'); ?> role="article">
 						
 						    <header class="article-header">
 							
 							    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 							
-							    <p class="byline vcard"><?php _e("Posted", "bonestheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span>.</p>
-						
 						    </header> <!-- end article header -->
 					
 						    <section class="entry-content clearfix">
 						
-							    <?php the_excerpt(); ?>
+							    <?php
+							    if (has_post_thumbnail()) {
+									?><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a><?php
+								} else { the_excerpt(); } ?>
 					
 						    </section> <!-- end article section -->
 						

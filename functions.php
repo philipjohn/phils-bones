@@ -4,7 +4,7 @@ Author: Eddie Machado
 URL: htp://themble.com/bones/
 
 This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images, 
+just edit things like thumbnail sizes, header images,
 sidebars, comments, ect.
 */
 
@@ -51,8 +51,8 @@ require_once('library/custom-post-type.php'); // you can disable this if you lik
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
-/* 
-to add more sizes, simply copy a line from above 
+/*
+to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
 upload a "featured image" as large as the biggest
 set width or height, all the other sizes will be
@@ -61,7 +61,7 @@ auto-cropped.
 To call a different size, simply change the text
 inside the thumbnail function.
 
-For example, to call the 300 x 300 sized image, 
+For example, to call the 300 x 300 sized image,
 we would use the function:
 <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 for the 600 x 100 image:
@@ -85,9 +85,9 @@ function bones_register_sidebars() {
     	'after_title' => '</h4>',
     ));
     
-    /* 
+    /*
     to add more sidebars or widgetized areas, just copy
-    and edit the above sidebar code. In order to call 
+    and edit the above sidebar code. In order to call
     your new sidebar just use the following code:
     
     Just change the name to whatever your new
@@ -119,11 +119,11 @@ function bones_comments($comment, $args, $depth) {
 	<li <?php comment_class(); ?>>
 		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
 			<header class="comment-author vcard">
-			    <?php 
+			    <?php
 			    /*
 			        this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
 			        echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-			    */ 
+			    */
 			    ?>
 			    <!-- custom gravatar call -->
 			    <?php
@@ -162,5 +162,15 @@ function bones_wpsearch($form) {
     return $form;
 } // don't remove this bracket!
 
+
+/***** MINE *****/
+function philbones_excerpt_length( $length ) {
+	global $post;
+	if ('portfolio' == $post->post_type && !is_admin())
+		return 15;
+	
+	return $length;
+}
+add_filter( 'excerpt_length', 'philbones_excerpt_length', 999 );
 
 ?>
