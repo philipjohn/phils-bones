@@ -22,7 +22,7 @@
 						
 							    <?php
 							    if (has_post_thumbnail()) {
-									?><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a><?php
+									?><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('portfolio'); ?></a><?php
 								} else { the_excerpt(); } ?>
 					
 						    </section> <!-- end article section -->

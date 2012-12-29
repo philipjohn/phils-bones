@@ -171,6 +171,13 @@ function philbones_excerpt_length( $length ) {
 	
 	return $length;
 }
-add_filter( 'excerpt_length', 'philbones_excerpt_length', 999 );
+
+function philbones_remove_filters(){
+	remove_filter( 'get_the_excerpt', 'the_bootstrap_custom_excerpt_more' );
+	remove_filter( 'excerpt_more', 'the_bootstrap_auto_excerpt_more' );
+	add_filter( 'excerpt_length', 'philbones_excerpt_length', 999 );
+	add_image_size('portfolio', 150, 150, true);
+}
+add_action('after_setup_theme', 'philbones_remove_filters');
 
 ?>
