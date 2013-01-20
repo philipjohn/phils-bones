@@ -24,6 +24,8 @@
 								</section> <!-- end article section -->
 						
 								<footer class="article-footer">
+								
+									<?php if (!is_mobile()){ echo do_shortcode('[author_bio avatar="yes"]'); } ?>
 			
 									<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
 							
