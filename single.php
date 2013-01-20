@@ -19,6 +19,7 @@
 								</header> <!-- end article header -->
 					
 								<section class="entry-content clearfix" itemprop="articleBody">
+									<?php if (is_mobile()){ philbones_the_post_thumbnail( 'bones-thumb-300' ); } else { philbones_the_post_thumbnail( 'medium' ); } ?>
 									<?php the_content(); ?>
 								</section> <!-- end article section -->
 						

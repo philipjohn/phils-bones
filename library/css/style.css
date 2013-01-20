@@ -169,7 +169,7 @@ mark {
  * Addresses margins set differently in IE6/7.
  */
 p, pre {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
 }
 /*
  * Corrects font family set oddly in IE6, S4/5, Chrome.
@@ -991,6 +991,9 @@ and moe scalable.
 /* general post style */
 /* general article on a page style */
 /* general style on an attatchment */
+.entry-content .philbones-thumbnail img {
+  margin: 0;
+}
 /* sticky post style */
 /* hentry class */
 /* style by category (i.e. category-videos) */

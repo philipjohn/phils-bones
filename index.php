@@ -19,7 +19,10 @@
 						    </header> <!-- end article header -->
 					
 						    <section class="entry-content clearfix">
-							    <?php if (is_mobile()) { the_excerpt(); } else { the_content(); } ?>
+							    <?php
+							    	if (is_mobile()) { philbones_the_post_thumbnail( 'bones-thumb-300' ); the_excerpt(); }
+							    	else { philbones_the_post_thumbnail( 'medium' ); the_content(); }
+							    ?>
 						    </section> <!-- end article section -->
 						
 						    <?php if (!is_mobile()) { ?><footer class="article-footer">
